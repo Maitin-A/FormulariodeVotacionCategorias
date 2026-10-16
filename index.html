@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Votación por Categorías - 13vo Aniversario VEN 9-1-1</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>13° Aniversario VEN 9-1-1</h1>
+    <p class="subtitulo" style="color: black;">
+      Para celebrar nuestro 13° aniversario, te invitamos a ser parte activa de
+      esta fecha tan importante votando por los logos institucionales que nos
+      representarán. <b> Podrás elegir tu diseño favorito en cuatro categorías:
+      redes sociales, agenda institucional, trofeo de Paramédicos de Combate y
+      vaso térmico.</b> <br> <br> Recuerda que solo tienes una oportunidad para participar,
+      por lo que te sugerimos revisar muy bien tus selecciones antes de
+      confirmar tu voto.
+    </p>
+
+    <!-- Panel Votante -->
+    <div class="panel" id="panel-identidad">
+      <label>Indica tu Dirección o Sede:</label>
+
+      <div class="custom-dropdown" id="dropdown-contenedor">
+        <button type="button" class="dropdown-btn" id="dropdown-btn">
+          <span id="dropdown-texto">-- Selecciona tu Sede / Dirección --</span>
+          <span class="dropdown-arrow"></span>
+        </button>
+
+        <ul class="dropdown-menu" id="dropdown-menu"></ul>
+      </div>
+
+      <span id="badge-estado" class="badge-fijado"></span>
+    </div>
+
+    <!-- Contenedor del Wizard -->
+    <div id="wizard-container" style="display: none">
+      <!-- Barra de progreso -->
+      <div class="stepper">
+        <div class="step-item active" id="step-nav-0">
+          <div class="step-circle">1</div>
+          <div class="step-label">Logo RRSS</div>
+        </div>
+        <div class="step-item" id="step-nav-1">
+          <div class="step-circle">2</div>
+          <div class="step-label">Agenda</div>
+        </div>
+        <div class="step-item" id="step-nav-2">
+          <div class="step-circle">3</div>
+          <div class="step-label">Trofeo</div>
+        </div>
+        <div class="step-item" id="step-nav-3">
+          <div class="step-circle">4</div>
+          <div class="step-label">Vaso</div>
+        </div>
+        <div class="step-item" id="step-nav-4">
+          <div class="step-circle">✓</div>
+          <div class="step-label">Revisión</div>
+        </div>
+      </div>
+
+      <!-- Panel de Selección de Categoría Activa -->
+      <div class="panel" id="panel-votacion">
+        <div class="categoria-header">
+          <h2 id="cat-titulo">Categoría</h2>
+          <p id="cat-descripcion">Descripción de la categoría</p>
+        </div>
+
+        <div id="grid-obras" class="grid-obras"></div>
+
+        <div class="nav-buttons">
+          <button
+            type="button"
+            class="btn-nav btn-prev"
+            id="btn-cat-prev"
+            style="display: none"
+          >
+            ← Categoría anterior
+          </button>
+          <button
+            type="button"
+            class="btn-nav btn-next"
+            id="btn-cat-next"
+            disabled
+          >
+            Siguiente categoría →
+          </button>
+        </div>
+      </div>
+
+      <!-- Panel de Revisión Final -->
+      <div
+        class="panel"
+        id="panel-revision"
+        style="display: none; text-align: center"
+      >
+        <h2>Revisión Final de tus Votos</h2>
+        <p style="color: #64748b">
+          Verifica tus elecciones antes de confirmar. Puedes hacer clic en
+          "Modificar" si deseas cambiar alguna.
+        </p>
+
+        <div class="revision-grid" id="revision-grid"></div>
+
+        <button type="button" class="btn-submit" id="btn-confirmar-final">
+          Confirmar y Enviar Votos
+        </button>
+        <div
+          id="mensaje-estado"
+          style="margin-top: 14px; font-weight: bold"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Modal Lightbox -->
+    <div id="lightbox-modal" class="lightbox-modal">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Ampliación" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
