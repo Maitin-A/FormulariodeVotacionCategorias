@@ -172,7 +172,7 @@ if (votoCompletado) {
   panelVotacion.style.display = "none";
   panelRevision.style.display = "block";
   panelRevision.innerHTML =
-    "<h3>Ya has emitido tus votos desde este dispositivo.</h3><p style='color:#16a34a;font-weight:bold;'>✓ Registro completado.</p>";
+    "<h1 style='color: #16a34a;'>¡Muchas gracias por tu Voto!</h1><h3>Ya has emitido tus votos desde este dispositivo.</h3><p style='color:#16a34a;font-weight:bold;'>✓ Registro completado.</p>";
 } else if (votanteGuardado) {
   const sede = SEDES.find((s) => s.id === votanteGuardado);
   if (sede) fijarIdentidad(sede.id, sede.nombre);
