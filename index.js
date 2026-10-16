@@ -360,6 +360,7 @@ btnConfirmarFinal.addEventListener("click", async () => {
 
     localStorage.setItem("voto_realizado_linea_4cat", "true");
     panelRevision.innerHTML = `
+          <h1 style="color: #16a34a;">¡Muchas gracias por tu voto!</h1>
           <h2 style="color: #16a34a;">¡Votación Completada con Éxito!</h2>
           <p>Tus elecciones en las 4 categorías han sido registradas por <strong>${votanteActualNombre}</strong>.</p>
         `;
